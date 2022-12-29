@@ -26,7 +26,7 @@ build {
     provisioner "shell" {
         inline = [
             "sudo chmod +x tomcat/tomcat.sh",
-            "sudo shtomcat/tomcat.sh"
+            "sudo sh tomcat/tomcat.sh"
         ]
     }
 }
