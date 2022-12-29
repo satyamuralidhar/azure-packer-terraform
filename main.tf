@@ -33,7 +33,7 @@ resource "azurerm_storage_account" "mystorage" {
 
 resource "null_resource" "packer-cmds" {
   provisioner "local-exec" {
-    command = "sudo chmod +x packer_build.sh && packer build build.pkr.hcl"
+    command = "sudo packer build build.pkr.hcl"
   }
   depends_on = [
     azurerm_resource_group.myrsg,
