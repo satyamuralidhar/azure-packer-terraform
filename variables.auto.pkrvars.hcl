@@ -1,7 +1,0 @@
-resource_group_name = "packer-rsg"
-storage_account = "packerstg01"
-location = "eastus"
-# client_id = ""
-# client_secret  = ""
-# subscription_id = ""
-# tenant_id = ""

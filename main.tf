@@ -24,19 +24,13 @@ resource "azurerm_storage_account" "mystorage" {
   ]
 }
 
-# resource "azurerm_shared_image_gallery" "sig" {
-#   name = "packer-sig"
-#   resource_group_name      = azurerm_resource_group.myrsg.name
-#   location                 = azurerm_resource_group.myrsg.location
-#   tags = local.required_tags
-# }
-
 resource "null_resource" "packer-cmds" {
   provisioner "local-exec" {
-    command = "sudo packer build build.pkr.hcl"
+    command = "packer build ."
   }
   depends_on = [
     azurerm_resource_group.myrsg,
     azurerm_storage_account.mystorage
   ]
 }
+

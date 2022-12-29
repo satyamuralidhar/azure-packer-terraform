@@ -1,12 +1,21 @@
-# variable "client_id" {}
-# variable  "client_secret" {}
-# variable "subscription_id" {}
-# variable "tenant_id" {}
-variable "resource_group_name" {}
-variable "storage_account" {}
-variable "location" {}
-
-
-
-
-#packer build -var client_id="$client_id" -var client_secret="$client_secret" -var subscription_id="$subscription_id" -var tenant_id="tenant_id"
+variable "client_id" {
+  type = string
+}
+variable "client_secret" {
+  type = string
+}
+variable "subscription_id" {
+  type = string
+}
+variable "tenant_id" {
+  type = string
+}
+variable "resource_group_name" {
+  type = string
+}
+variable "storage_account" {
+  type = string
+}
+variable "location" {
+  type = string
+}
