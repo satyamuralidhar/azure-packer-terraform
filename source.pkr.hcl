@@ -21,6 +21,7 @@ build {
     inline = [
       "sudo yum install java-1.8.0-openjdk-devel -y",
       "sudo yum install tomcat -y",
+      "sudo ufw allow 8080",
       "sudo service tomcat restart",
       "sudo service tomcat status",
       "/usr/sbin/waagent -force -deprovision+user && export HISTSIZE=0 && sync"
